@@ -34,18 +34,9 @@ module.exports = function(grunt) {
         options: {
         },
         files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'customname': ['test/fixtures/testing', 'test/fixtures/123']
         }
       }
-//      custom_options: {
-//        options: {
-//          separator: ': ',
-//          punctuation: ' !!!'
-//        },
-//        files: {
-//          'filepath': ['test/fixtures/testing', 'test/fixtures/123']
-//        }
-//      }
     }
 
     // Unit tests.
