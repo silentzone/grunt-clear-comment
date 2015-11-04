@@ -1,7 +1,7 @@
 {
   "name": "grunt-clean-comment",
   "description": "clean all comment in files",
-  "version": "0.1.0",
+  "version": "0.1.11",
   "homepage": "https://github.com/Administrator/grunt_dev",
   "author": {
     "name": "li",

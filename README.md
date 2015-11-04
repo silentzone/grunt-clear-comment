@@ -14,17 +14,17 @@ npm install grunt-clean-comment --save-dev
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-clean-comment');
+grunt.loadNpmTasks('cleancomment');
 ```
 
-## The "grunt-clean-comment" task
+## The "cleancomment" task
 
 ### Overview
 In your project's Gruntfile, add a section named `grunt-clean-comment` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-    grunt-clean-comment: {
+    cleancomment: {
        default_options: {
          options: {
          },
