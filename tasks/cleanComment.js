@@ -1,5 +1,5 @@
 /*
- * cleanComment
+ * grunt-clean-comment
  * https://github.com/Administrator/grunt_dev
  *
  * Copyright (c) 2015 li
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('cleanComment', 'The best Grunt plugin ever.', function() {
+  grunt.registerMultiTask('cleancomment', 'Grunt plugin.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
       punctuation: '.',
@@ -23,13 +23,13 @@ module.exports = function(grunt) {
           var STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))|([\r\n]|\s)*/mg;
           var newText = text.toString().replace(STRIP_COMMENTS, '');
           return newText;
-    }
+    };
     var writeFile = function (str,path) {
         // Write the destination file.
         grunt.file.write(path,str);
         // Print a success message.
         grunt.log.writeln('File "' + path  + '" comments is clean ');
-    }
+    };
 
 
     // Iterate over all specified file groups.

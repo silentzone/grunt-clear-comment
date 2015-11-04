@@ -1,5 +1,5 @@
 /*
- * cleanComment
+ * grunt-clean-comment
  * https://github.com/Administrator/grunt_dev
  *
  * Copyright (c) 2015 li
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    cleanComment: {
+    cleancomment: {
       default_options: {
         options: {
         },
@@ -37,12 +37,12 @@ module.exports = function(grunt) {
           'customname': ['test/fixtures/testing', 'test/fixtures/123']
         }
       }
-    }
+    },
 
-    // Unit tests.
-//    nodeunit: {
-//      tests: ['test/*_test.js']
-//    }
+  //  Unit tests.
+   nodeunit: {
+     tests: ['test/*_test.js']
+   }
 
   });
 
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'cleanComment']); // , 'nodeunit'
+  grunt.registerTask('test', ['clean', 'cleancomment','nodeunit']); //  
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);

@@ -1,6 +1,6 @@
 {
-  "name": "cleanComment",
-  "description": "The best Grunt plugin ever.",
+  "name": "grunt-clean-comment",
+  "description": "clean all comment in files",
   "version": "0.1.0",
   "homepage": "https://github.com/Administrator/grunt_dev",
   "author": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Administrator/grunt_dev.git"
+    "url": "git@github.com:silentzone/grunt-clear-comment.git"
   },
   "bugs": {
-    "url": "https://github.com/Administrator/grunt_dev/issues"
+    "url": "https://github.com/silentzone/grunt-clear-comment/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/Administrator/grunt_dev/blob/master/LICENSE-MIT"
+      "url": "https://github.com/silentzone/grunt-clear-comment/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
