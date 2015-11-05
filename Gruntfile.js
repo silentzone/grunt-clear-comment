@@ -39,6 +39,7 @@ module.exports = function(grunt) {
     cleancomment: {
       default_options: {
         options: {
+          type: "js"
         },
         files: {
           'customname': ['test/fixtures/testing', 'test/fixtures/123']

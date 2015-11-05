@@ -13,11 +13,11 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('cleancomment', 'Grunt plugin.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
-    var fileType = this.options.type; // "js" "css" 
+    var options = this.options(); // "js" "css" 
     var STRIP_COMMENTS;
-    if(fileType !== "css") {  STRIP_COMMENTS= /((\/\/.*$)|(\/\*[\s\S]*?\*\/))|([\r\n]|\s)*/mg; }
-    else { STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))|([\r\n])*/mg; }
-    var replaceComment = function (text) { 
+    if(options.type!== "css") {  STRIP_COMMENTS= /((\/\/.*$)|(\/\*[\s\S]*?\*\/))|([\r\n]|\s)*/mg; }
+    else { STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))|([\r\n])*/mg;}
+    var replaceComment = function (text) {  
           var newText = text.toString().replace(STRIP_COMMENTS, '');
           return newText;
     };
