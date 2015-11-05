@@ -27,22 +27,29 @@ exports.cleancomment = {
     // setup here if necessary
     done();
   },
-  default_options: function(test) {
+  cleanFile123: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default_options');
-    var expected = grunt.file.read('test/expected/default_options');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
+    var actual = grunt.file.read('tmp/123');
+    var expected = grunt.file.read('test/fixtures/123');
+    test.equal(actual, expected, 'test/fixtures/123内容等于 tmp/123 中内容');
 
     test.done();
   },
-  custom_options: function(test) {
+  cleanFiletesting: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/custom_options');
-    var expected = grunt.file.read('test/expected/custom_options');
-    test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
+    var actual = grunt.file.read('tmp/testing');
+    var expected = grunt.file.read('test/fixtures/testing');
+    test.equal(actual, expected, 'test/fixtures/testing 内容等于 tmp/testing 中内容 '); 
+    test.done();
+  },
+  ShouldNotPass: function(test) {
+    test.expect(1);
 
+    var actual = grunt.file.read('tmp/testing-hascomment');
+    var expected = grunt.file.read('test/fixtures/testing');
+    test.equal(actual, expected, 'test/fixtures/testing 内容不等于 tmp/testing 中内容 '); 
     test.done();
   },
 };

@@ -16,17 +16,24 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'tasks/*.js',
-        '<%= nodeunit.tests %>'
+        'test/*_test.js' 
       ],
       options: {
         jshintrc: '.jshintrc'
       }
     },
+    jasmine : {
+      src : 'tasks/*.js',
+      options : {
+        specs : 'spec/**/*.js',
+        keepRunner: true
+      }
+    },
 
     // Before generating any new files, remove any previously-created files.
-    clean: {
-      tests: ['tmp']
-    },
+    // clean: {
+    //   tests: ['tmp']
+    // },
 
     // Configuration to be run (and then tested).
     cleancomment: {
@@ -53,12 +60,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'cleancomment','nodeunit']); //  
+  grunt.registerTask('clean', [ 'cleancomment']);   
+  grunt.registerTask('test', ['jshint','nodeunit']); 
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('default', ['clean' ]); //  use 'clean', command to remove tmp file. 
 
 };

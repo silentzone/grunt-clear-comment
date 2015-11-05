@@ -14,7 +14,7 @@ npm install grunt-clean-comment --save-dev
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('cleancomment');
+grunt.loadNpmTasks('grunt-clean-comment');
 ```
 
 ## The "cleancomment" task
@@ -25,9 +25,7 @@ In your project's Gruntfile, add a section named `grunt-clean-comment` to the da
 ```js
 grunt.initConfig({
     cleancomment: {
-       default_options: {
-         options: {
-         },
+       default_options: { 
          files: {
            'customname': ['test/fixtures/testing', 'test/fixtures/123']
          }
