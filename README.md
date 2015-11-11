@@ -35,9 +35,31 @@ grunt.initConfig({
 ```
 
 ### Options
+```
+    cleancomment: {
+      default_options: {
+        options: {
+          type: "css"
+        },
+        files: {
+          'customname': ['test/fixtures/testing', 'test/fixtures/123']
+        }
+      }
+    }
+```
+options.type == "css"   Allow reserved spaces
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+ 
+commit 36e0f17fef5dee320a6329ee5bbc709a6a121d6d
+    fix options.type undefine bug
+
+commit 9b37b7d95e03b23578c705c016ff1ab265dc9b28
+    add option.type for clean  js or css file
+
+commit a696389508287a99a7687139f7cc7fe3845f9bfd
+     grunt.loadNpmTasks name is change
+
